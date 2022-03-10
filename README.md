@@ -27,3 +27,9 @@ Laravel Sayfasını Görebilirsiniz.
 '.docker/entrypoint.sh' dosyasındaki '#!/bin/bash' komutunu '#!/bin/sh' ile değiştirin.
 
 
+
+## TEST 
+
+docker-composer exec app bash
+
+

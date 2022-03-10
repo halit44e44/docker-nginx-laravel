@@ -15,7 +15,12 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        // $schedule->command('inspire')->hourly();
+        $schedule->command('cp:new-users-check')->hourly();
+        /**
+         * Run All Queue
+         * Error redis.....
+         */
+        $schedule->command('queue:work', ['--stop-when-empty', '--timeout=0', '--memory=2048'])->everyMinute()->withoutOverlapping()->runInBackground();
     }
 
     /**

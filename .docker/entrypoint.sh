@@ -5,5 +5,7 @@ composer install
 
 #Just for Laravel Apps
 #php artisan migrate --seed
+#php artisan cp:new-users-check
+#php artisan schedule run
 
 php-fpm
