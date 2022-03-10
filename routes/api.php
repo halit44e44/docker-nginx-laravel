@@ -18,15 +18,13 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-//Route::group(['middleware' => 'auth:sanctum', 'as' => 'api.'], function () {
-    //JsonPlaceholder API
-    Route::group(['prefix' => 'users', 'as' => 'users.'], function () {
-        Route::get('/getAll', [\App\Http\Controllers\Api\UserController::class, 'getAll'])->name('getAll');
-        Route::get('/getById/{id}', [\App\Http\Controllers\Api\UserController::class, 'getById'])->name('getById');
-    });
-    //Gender API
-    Route::group(['prefix' => 'gender', 'as' => 'gender.'], function () {
-        Route::get('/getAll', [\App\Http\Controllers\Api\GenderUserController::class, 'getAll'])->name('getAll');
-        Route::get('/getById/{name}', [\App\Http\Controllers\Api\GenderUserController::class, 'getById'])->name('getById');
-    });
-//});
+//JsonPlaceholder API
+Route::group(['prefix' => 'users', 'as' => 'users.'], function () {
+    Route::get('/getAll', [\App\Http\Controllers\Api\UserController::class, 'getAll'])->name('getAll');
+    Route::get('/getById/{id}', [\App\Http\Controllers\Api\UserController::class, 'getById'])->name('getById');
+});
+//Gender API
+Route::group(['prefix' => 'gender', 'as' => 'gender.'], function () {
+    Route::get('/getAll', [\App\Http\Controllers\Api\GenderUserController::class, 'getAll'])->name('getAll');
+    Route::get('/getById/{name}', [\App\Http\Controllers\Api\GenderUserController::class, 'getById'])->name('getById');
+});

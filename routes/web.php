@@ -13,7 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-//    phpinfo(); die;
-    return view('welcome');
+Route::group(['middleware' => ['guest'], 'prefix' => 'auth', 'as' => 'auth.'], function () {
+    //Login.
 });
+
+//Route::group(['middleware' => ['auth:sanctum']], function () {
+    Route::get('/', [\App\Http\Controllers\IndexController::class, 'index'])->name('index');
+//});
+

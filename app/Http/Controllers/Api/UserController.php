@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Models\User;
 use GuzzleHttp\Exception\GuzzleException;
 use GuzzleHttp\Client;
+use Illuminate\Http\JsonResponse;
 
 class UserController extends Controller implements UserInterface
 {
@@ -22,31 +23,33 @@ class UserController extends Controller implements UserInterface
 
     /***
      * user getAll data
-     * @return array|\Illuminate\Http\JsonResponse
+     * @return array|JsonResponse
      */
-    public function getAll(): \Illuminate\Http\JsonResponse|array
+    public function getAll(): JsonResponse|array
     {
         try {
+            $code = 500;
+            $arr = [
+              'status' => false,
+              'message' => 'There is data'
+            ];
+
             $res = $this->client->request('GET', env('PLACEHOLDERS') . 'users');
             $data = json_decode($res->getBody()->getContents());
             $dbUsers = User::all();
-
             if (empty($dbUsers->toArray())) {
                 foreach ($data as $item) {
                     $array = new User();
                     $array->name = $item->name;
                     $array->save();
                 }
-            } else {
-                return response()->json([
-                    'status' => false,
-                    'message' => 'There is data'
-                ], 500);
+                $arr = [
+                    'status' => true,
+                    'message' => 'success'
+                ];
+                $code = 200;
             }
-            return response()->json([
-                'status' => true,
-                'message' => 'success'
-            ], 200);
+            return response()->json($arr, $code);
 
         } catch (\Exception $exception) {
             return [
@@ -67,7 +70,7 @@ class UserController extends Controller implements UserInterface
     /***
      * users getById data
      * @param integer $id
-     * @return array|\Illuminate\Http\JsonResponse|mixed
+     * @return array|JsonResponse|mixed
      */
     public function getById(int $id): mixed
     {
