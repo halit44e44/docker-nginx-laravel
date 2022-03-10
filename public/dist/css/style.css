@@ -1,0 +1,59 @@
+/*.center {*/
+/*    margin-bottom: 15px;*/
+/*}*/
+/*.dataTables_filter {*/
+/*    margin-top: -155px;*/
+/*    margin-bottom: 133px;*/
+/*}*/
+
+/*.dataTables_length {*/
+/*    margin-bottom: -47px;*/
+/*}*/
+body {
+    font-size: 13px;
+}
+
+.content-header h1 {
+    font-size: 1.3rem;
+}
+
+.card-title {
+    font-size: 0.9rem;
+}
+
+.btn {
+    font-size: 0.7rem;
+}
+
+.top-custom {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: end;
+}
+
+h5 {
+    font-size: 0.9rem;
+}
+
+.form-control {
+    font-size: 0.8rem;
+}
+
+.dropdown-menu {
+    font-size: 0.8rem;
+}
+.swal2-popup{
+    font-size: 0.8rem!important;
+}
+
+.bottom-custom  {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.dataTables_length {
+    margin-right: auto;
+    margin-top: 10px;
+}
+
