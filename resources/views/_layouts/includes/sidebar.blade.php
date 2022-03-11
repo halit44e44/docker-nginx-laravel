@@ -12,10 +12,20 @@
 
             <li class="nav-item">
                 <a href="{{ route('index') }}"
-                   class="nav-link  active">
+                   class="nav-link @if(request()->route()->getName() === 'index') active @endif">
                     <i class="nav-icon fas fa-home"></i>
                     <p>
-                        Ana Sayfa
+                        Homepage
+                    </p>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a href="{{ route('users.index') }}"
+                   class="nav-link @if(request()->route()->getName() === 'users.index') active @endif">
+                    <i class="nav-icon fas fa-user-alt"></i>
+                    <p>
+                        Users
                     </p>
                 </a>
             </li>
@@ -25,7 +35,7 @@
                    class="nav-link">
                     <i class="nav-icon fas fa-tachometer-alt"></i>
                     <p>
-                        Entegrasyonlar
+                        Users API
                     </p>
                 </a>
             </li>
@@ -34,7 +44,7 @@
                 <a href="" class="nav-link">
                     <i class="nav-icon fa fa-lock"></i>
                     <p>
-                        Güvenli Çıkış
+                        Safe Exit
                     </p>
                 </a>
             </li>

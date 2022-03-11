@@ -19,5 +19,9 @@ Route::group(['middleware' => ['guest'], 'prefix' => 'auth', 'as' => 'auth.'], f
 
 //Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::get('/', [\App\Http\Controllers\IndexController::class, 'index'])->name('index');
+
+    Route::group(['prefix' => 'users', 'as' => 'users.'], function () {
+        Route::get('/', [\App\Http\Controllers\UserController::class, 'index'])->name('index');
+    });
 //});
 

@@ -10,9 +10,6 @@
 <body class="sidebar-mini layout-fixed sidebar-collapse">
 <div class="wrapper">
 
-    <!-- Preloader -->
-{{--@include('_layouts.components.preloader')--}}
-
 <!-- Navbar -->
 @include('_layouts.includes.navbar')
 <!-- /.navbar -->
@@ -21,10 +18,10 @@
     <aside class="main-sidebar sidebar-dark-primary elevation-4">
         <!-- Brand Logo -->
         <a href="{{ route('index') }}" class="brand-link">
-            <img src="{{ asset('dist/img/AdminLTELogo.png') }}" alt="Connectprof Logo"
+            <img src="{{ asset('dist/img/AdminLTELogo.png') }}" alt="Docker Nginx"
                  class="brand-image img-circle elevation-3"
                  style="opacity: .8">
-            <span class="brand-text font-weight-light">Connectprof</span>
+            <span class="brand-text font-weight-light">Docker Nginx</span>
         </a>
 
         <!-- Sidebar -->

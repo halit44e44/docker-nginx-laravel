@@ -5,7 +5,7 @@
             <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
         </li>
         <li class="nav-item d-none d-sm-inline-block">
-            <a href="{{ route('index') }}" class="nav-link">Ana Sayfa</a>
+            <a href="{{ route('index') }}" class="nav-link">Homepage</a>
         </li>
     </ul>
 
@@ -21,11 +21,11 @@
                         class="badge badge-warning navbar-badge"></span>
                 </a>
                 <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-                    <span class="dropdown-item dropdown-header"> Bildirim</span>
+                    <span class="dropdown-item dropdown-header">Notification</span>
 
 
                     <a href="#" class="dropdown-item dropdown-footer"
-                       id="deleteNotification">Tüm Bildirimleri Sİl</a>
+                       id="deleteNotification">Delete All Notifications</a>
                 </div>
             </li>
 

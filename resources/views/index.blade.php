@@ -6,12 +6,12 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="m-0">İstatistik</h1>
+                    <h1 class="m-0">Statistics</h1>
                 </div><!-- /.col -->
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="#">Ana Sayfa</a></li>
-                        <li class="breadcrumb-item active">İstatistik v1</li>
+                        <li class="breadcrumb-item"><a href="#">Homepage</a></li>
+                        <li class="breadcrumb-item active">Statistics v1</li>
                     </ol>
                 </div><!-- /.col -->
             </div><!-- /.row -->
@@ -24,13 +24,13 @@
         <div class="container-fluid">
             <!-- Small boxes (Stat box) -->
             <div class="row">
-                <div class="col-lg-3 col-6">
+                <div class="col-lg-4 col-6">
                     <!-- small box -->
                     <div class="small-box bg-info">
                         <div class="inner">
-                            <h3>333</h3>
+                            <h3>{{ $usersCount }}</h3>
 
-                            <p>Entegrasyon</p>
+                            <p>Package</p>
                         </div>
                         <div class="icon">
                             <i class="ion ion-bag"></i>
@@ -39,14 +39,14 @@
                     </div>
                 </div>
                 <!-- ./col -->
-                <div class="col-lg-3 col-6">
+                <div class="col-lg-4 col-6">
                     <!-- small box -->
                     <div class="small-box bg-success">
                         <div class="inner">
-                            <h3>334<sup
+                            <h3>{{ $usersCount }}<sup
                                     style="font-size: 20px">%</sup></h3>
 
-                            <p>Müşteriye İlgi Düzeyi</p>
+                            <p>User Activity Level</p>
                         </div>
                         <div class="icon">
                             <i class="ion ion-stats-bars"></i>
@@ -55,31 +55,16 @@
                     </div>
                 </div>
                 <!-- ./col -->
-                <div class="col-lg-3 col-6">
+                <div class="col-lg-4 col-6">
                     <!-- small box -->
                     <div class="small-box bg-warning">
                         <div class="inner">
-                            <h3>445</h3>
+                            <h3>{{ $usersCount }}</h3>
 
-                            <p>Toplam Müşteri</p>
+                            <p>Total User</p>
                         </div>
                         <div class="icon">
                             <i class="ion ion-person-add"></i>
-                        </div>
-                        <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-                    </div>
-                </div>
-                <!-- ./col -->
-                <div class="col-lg-3 col-6">
-                    <!-- small box -->
-                    <div class="small-box bg-danger">
-                        <div class="inner">
-                            <h3>667</h3>
-
-                            <p>Atanmamış Müşteri</p>
-                        </div>
-                        <div class="icon">
-                            <i class="ion ion-pie-graph"></i>
                         </div>
                         <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                     </div>
