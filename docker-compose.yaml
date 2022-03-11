@@ -19,7 +19,6 @@ services:
       - _DB_USERNAME=root
       - _DB_PASSWORD=root
       - _REDIS_HOST=redis
-      - PHP_IDE_CONFIG=serverName=XdebugServer
     volumes:
       - .:/var/www
     networks:
