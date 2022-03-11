@@ -23,13 +23,18 @@
 Tarayıcı URL http://localhost:8000  
 Laravel Sayfasını Görebilirsiniz.
 
+<h2 align="center">
+  ÖNEMLİ LÜTFEN OKUYUN
+</h2>
+
 ## 💻 SUNUCU ERROR
-'.docker/entrypoint.sh' dosyasındaki '#!/bin/bash' komutunu '#!/bin/sh' ile değiştirin.
+
+1. Adım -> [.docker/entrypoint.sh] içerisindeki '#!/bin/bash' komutunu '#!/bin/sh' ile değiştirin.
+2. Adım -> Tekrardan değiştirdiğiniz '#!/bin/sh' komutunu tekrardan '#!/bin/bash' ile değiştirin.
+3. Adım -> APP sunucusunun gereksinimleri yüklemesini bekleyin. İnternet hızınıza bağlı olarak değişkenlik gösterebilir.
 
 
-
-## TEST 
-
+## TEST
 docker-composer exec app bash
 
 
