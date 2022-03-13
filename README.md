@@ -22,9 +22,9 @@
 - Tarayıcı URL http://localhost:8000
 - Redis 127.0.0.1:6489
 - phpMyAdmin localhost:9090
-sunucu -> db
-usr pass -> root root
-Laravel Sayfasını Görebilirsiniz.
+- Sunucu: db
+- user: root
+- password: root
 
 <h2 align="center">
   ÖNEMLİ LÜTFEN OKUYUN
