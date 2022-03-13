@@ -31,11 +31,11 @@
             </li>
 
             <li class="nav-item">
-                <a href=""
-                   class="nav-link">
+                <a href="{{ route('colors.index') }}"
+                   class="nav-link @if(request()->route()->getName() === 'colors.index') active @endif">
                     <i class="nav-icon fas fa-tachometer-alt"></i>
                     <p>
-                        Users API
+                        Colors
                     </p>
                 </a>
             </li>

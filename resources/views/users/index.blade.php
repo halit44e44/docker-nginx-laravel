@@ -23,12 +23,12 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="m-0">Tüm Müşteriler</h1>
+                    <h1 class="m-0">All Users</h1>
                 </div><!-- /.col -->
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="{{ route('index') }}">Ana Sayfa</a></li>
-                        <li class="breadcrumb-item active">Tüm Müşteriler</li>
+                        <li class="breadcrumb-item"><a href="{{ route('index') }}">Homepage</a></li>
+                        <li class="breadcrumb-item active">All Users</li>
                     </ol>
                 </div><!-- /.col -->
             </div><!-- /.row -->
@@ -44,7 +44,7 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-body">
-                            <table class="table table-bordered table-hover dtr-inline" style="width:100%" id="empTable">
+                            <table class="table table-bordered table-hover dtr-inline" style="width:100%" id="serverSideDataTable">
                                 <thead>
                                 <tr>
                                     <th scope="col">ID</th>

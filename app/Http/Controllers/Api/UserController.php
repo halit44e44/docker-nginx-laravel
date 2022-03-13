@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Helpers\FunctionHelpers;
 use App\Http\Controllers\Api\Interface\UserInterface;
 use App\Http\Controllers\Controller;
 use App\Models\User;
@@ -52,17 +53,10 @@ class UserController extends Controller implements UserInterface
             return response()->json($arr, $code);
 
         } catch (\Exception $exception) {
-            return [
-                'status' => false,
-                'msg' => 'Error Exception',
-                'err' => $exception->getMessage()
-            ];
+            return FunctionHelpers::exceptionError(false, 'Error Exception', $exception->getMessage(), 404);
+
         } catch (GuzzleException $exception) {
-            return [
-                'status' => false,
-                'msg' => 'GuzzleException Exception',
-                'err' => $exception->getMessage()
-            ];
+            return FunctionHelpers::exceptionError(false, 'Error GuzzleException', $exception->getMessage(), 404);
         }
     }
 
