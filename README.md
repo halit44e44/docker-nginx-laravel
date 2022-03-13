@@ -19,7 +19,11 @@
 ```
 # docker-compose up -d
 ```  
-Tarayıcı URL http://localhost:8000  
+- Tarayıcı URL http://localhost:8000
+- Redis 127.0.0.1:6489
+- phpMyAdmin localhost:9090
+sunucu -> db
+usr pass -> root root
 Laravel Sayfasını Görebilirsiniz.
 
 <h2 align="center">
