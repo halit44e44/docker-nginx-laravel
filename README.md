@@ -36,6 +36,10 @@
 ```
 - '.docker/entrypoint.sh' dosyasındaki '#!/bin/bash' komutunu '#!/bin/sh' ile değiştirin.  Veya tam tersini
 - Adım -> APP sunucusunun gereksinimleri yüklemesini bekleyin. İnternet hızınıza bağlı olarak değişkenlik gösterebilir.
+- Sunucunun hata vermesinin sebebi dosya izninin olmaması lütfen kök klasörde veya dosyanınm bulunduğu konumda aşağıdaki kodu çalıştırın
+```
+# chmod +x .docker/entrypoint.sh
+```  
 
 
 ## Cron Job  
