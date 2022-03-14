@@ -31,15 +31,17 @@
 </h2>
 
 ## 💻 SUNUCU ERROR
-```
-# docker-composer exec app bash
-```
-- '.docker/entrypoint.sh' dosyasındaki '#!/bin/bash' komutunu '#!/bin/sh' ile değiştirin.  Veya tam tersini
-- Adım -> APP sunucusunun gereksinimleri yüklemesini bekleyin. İnternet hızınıza bağlı olarak değişkenlik gösterebilir.
+- **HATA1**
+- Adım 1- '.docker/entrypoint.sh' dosyasındaki '#!/bin/bash' komutunu '#!/bin/sh' ile değiştirin. Biraz bekledikten sonra tekrar '#!/bin/bash' ile değiştirin.
+- Lütfen HATA 1 de yaptığınız işlemi bekleyin entripoint.sh dosyasını okuması uzun sürebiliyor
+- Adım 2 -Adım -> APP sunucusunun gereksinimleri yüklemesini bekleyin. İnternet hızınıza bağlı olarak değişkenlik gösterebilir.
+
+- **HATA2**
 - Sunucunun hata vermesinin sebebi dosya izninin olmaması lütfen kök klasörde veya dosyanınm bulunduğu konumda aşağıdaki kodu çalıştırın
 ```
 # chmod +x .docker/entrypoint.sh
 ```  
+
 
 
 ## Cron Job  
