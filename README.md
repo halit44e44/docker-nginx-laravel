@@ -30,16 +30,14 @@
   ÖNEMLİ LÜTFEN OKUYUN
 </h2>
 
-## 💻 SUNUCU ERROR
-- **HATA1**
-- Adım 1- '.docker/entrypoint.sh' dosyasındaki '#!/bin/bash' komutunu '#!/bin/sh' ile değiştirin. Biraz bekledikten sonra tekrar '#!/bin/bash' ile değiştirin.
-- Lütfen HATA 1 de yaptığınız işlemi bekleyin entripoint.sh dosyasını okuması uzun sürebiliyor
-- Adım 2 -Adım -> APP sunucusunun gereksinimleri yüklemesini bekleyin. İnternet hızınıza bağlı olarak değişkenlik gösterebilir.
+## 💻 SUNUCU ERROR (APP HTTP 304)
+- Lütfen tüm docker imagesler indikten sonra ortalama 2 dakika bekleyiniz. Ardından '.docker/entrypoint.sh' dosyasının her hangi bir alanında
+bir boşluk bırakarak dosyayı kayıt edelim. Sunucu kendini otomatikmen başlatacaktır. Başlatmadığı taktirde bir kaç dakika daha bekleyip aynı işlemi yapalım. Bu işlem
+kök dizinine entrypoint.sh dosyasını kaydetmemizi sağlar.
 
-- **HATA2**
-- Sunucunun hata vermesinin sebebi dosya izninin olmaması lütfen kök klasörde veya dosyanınm bulunduğu konumda aşağıdaki kodu çalıştırın
+-Hatanın sebebi dosya yetki hatası ve kurulum aşamasında o bosyayı bulamıyor. yetki ile çözmek için lütfen sunucu kapanmadan bu komutları 'var/www' içerisinde çalıştıralım.
 ```
-# chmod +x .docker/entrypoint.sh
+# chmod 777 .docker/entrypoint.sh
 ```  
 
 
