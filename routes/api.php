@@ -17,6 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+/*
 Route::group(['prefix' => 'api', 'as' => 'api.'], function () {
     //JsonPlaceholder API
     Route::group(['prefix' => 'users', 'as' => 'users.'], function () {
@@ -28,3 +29,26 @@ Route::group(['prefix' => 'api', 'as' => 'api.'], function () {
         Route::post('/getColor/{id?}', [\App\Http\Controllers\Api\ColorController::class, 'getColor'])->name('getColor');
     });
 });
+*/
+
+
+Route::prefix('api')
+    ->name('api.')
+    ->group(function () {
+
+        Route::prefix('users')
+            ->name('users.')
+            ->controller(\App\Http\Controllers\Api\UserController::class)
+            ->group(function () {
+                Route::get('/getAll', 'getAll')->name('getAll');
+                Route::get('/getById/{id}', 'getById')->name('getById');
+            });
+
+        Route::prefix('colors')
+            ->name('colors.')
+            ->controller(\App\Http\Controllers\Api\ColorController::class)
+            ->group(function () {
+                Route::post('/getColor/{id?}', 'getColor')->name('getColor');
+            });
+
+    });
