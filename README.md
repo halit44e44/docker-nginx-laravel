@@ -40,6 +40,8 @@ kök dizinine entrypoint.sh dosyasını kaydetmemizi sağlar.
 # chmod 777 .docker/entrypoint.sh
 ```  
 
+- *** Hata Giderilmezse Lütfen '.docker/entrypoint.sh' dosyasındaki '#!/bin/bash' -> '#!/bin/sh' ile değiştirip kurulumu deneyin.
+
 
 
 ## Cron Job  
